@@ -63,8 +63,6 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     bindex (0.8.1)
-    bootsnap (1.7.0)
-      msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.35.3)
@@ -76,6 +74,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     childprocess (3.0.0)
+    coderay (1.1.3)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
     erubi (1.10.0)
@@ -100,10 +99,12 @@ GEM
     mimemagic (0.3.5)
     mini_mime (1.0.2)
     minitest (5.14.3)
-    msgpack (1.4.2)
     nio4r (2.5.4)
     nokogiri (1.11.1-x86_64-darwin)
       racc (~> 1.4)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     public_suffix (4.0.6)
     puma (5.2.0)
       nio4r (~> 2.0)
@@ -161,6 +162,9 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (2.3.1)
+    simple_form (5.0.3)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -202,16 +206,18 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
-  bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
   jbuilder (~> 2.7)
-  listen (~> 3.3)
+  listen
+  pry
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
+  railties
   sass-rails (>= 6)
   selenium-webdriver
+  simple_form
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
