@@ -43,7 +43,7 @@ before_action :find_pin, only: [:show, :edit, :update, :destroy]
   private 
 
   def pin_params
-    params.require(:pin).permit(:title, :description)
+    params.require(:pin).permit(:title, :description, :image)
   end 
 
   def find_pin
