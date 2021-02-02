@@ -33,7 +33,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'sassc-rails'
-
+gem 'masonry-rails'
 gem 'railties'
 gem 'simple_form'
 
