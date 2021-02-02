@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # # Reduces boot times through caching; required in config/boot.rb
 # gem 'spree_auth_devise'
 gem 'pry'
-# gem 'devise'
+gem 'devise'
 # gem 'paperclip', '~> 6.1'
 # gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # gem 'spree'
