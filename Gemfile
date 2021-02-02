@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'spree'
 gem 'pry'
 gem 'devise'
-# gem 'paperclip', '~> 6.1'
+gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'sassc-rails'
 
