@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'acts_as_votable'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
