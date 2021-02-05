@@ -1,6 +1,10 @@
 class Pin < ApplicationRecord
   acts_as_votable
-  belongs_to :user 
+  belongs_to :user
+  # belongs_to :category
+  has_many :users, through: :comments
+  
+
   has_attached_file :image, styles: { medium: "300x300>" }
 
     

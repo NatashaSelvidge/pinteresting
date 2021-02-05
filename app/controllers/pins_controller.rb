@@ -6,7 +6,7 @@ before_action :authenticate_user!, except: [:index, :show]
   end 
 
   def show 
-  
+ 
   end 
 
   def new 
@@ -49,7 +49,7 @@ before_action :authenticate_user!, except: [:index, :show]
   private 
 
   def pin_params
-    params.require(:pin).permit(:title, :description, :image)
+    params.require(:pin).permit(:title, :description, :image, :comment)
   end 
 
   def find_pin
