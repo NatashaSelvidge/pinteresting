@@ -10,4 +10,7 @@ class User < ApplicationRecord
   has_many :commented_pins, through: :comments,
     source: :pin
   # has_many :categories, through: :pins
+  # def username
+  #   email.split('@')[0]
+  # end 
 end
