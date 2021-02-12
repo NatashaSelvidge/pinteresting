@@ -1,0 +1,19 @@
+ <div class="comment-body">
+ <div class="row">
+  <small>
+    <%= comment.commenter %>  
+    says...
+  </small> 
+  <br>
+  <p>
+    "<%= comment.content %>"
+  </p>
+      <div class="comment-delete">
+      <%= link_to "Delete",[comment.pin, comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %> <br>
+      </div>
+  <div class="comment-edit">
+      <%= link_to "Edit", edit_comment_path, class: "btn btn-primary" %>
+    </div>
+    </div>
+  </div>
+ </div>

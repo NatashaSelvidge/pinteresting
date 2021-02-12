@@ -1,0 +1,14 @@
+<div class="form-content">
+      <%= form_for ([@pin, @pin.comments.build]) do |f| %>
+      <p>
+        <%f.label :commenter %> <br>
+        <%f.text_field :commenter %> 
+      </p>
+      <p>
+        <%= f.label :content %>: <br>
+        <%= f.text_field :content %>
+      <%=f.submit "Post", class: "post" %>
+      </p>
+    <% end %>   
+</div>
+    

@@ -15,9 +15,11 @@
       <div class="panel-footer">
         <div class="row">
           <div class="col-md-6">
-            <p class="user">
-              Submitted by
-              <%= @pin.user.username %>
+            <p class="card-text">
+              <small class="text-muted">
+              <%= @pin.updated_at.strftime("%A, %B, %e, %Y") %>
+             By: <%= @pin.user.username.capitalize %> | <%= pluralize(@comments.count, "Comment") %>
+              </small>
             </p>
           </div>
           <div class="col-md-6">
@@ -26,16 +28,30 @@
                 <span class="glyphicon glyphicon-heart"></span>
                 <%= @pin.get_upvotes.size %>
               <% end %>
-              <% if user_signed_in? %>
+                <% if @pin.user == current_user %>
                 <%= link_to "Edit", edit_pin_path, class: "btn btn-default" %>
                 <%= link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+                <%= link_to "Back", root_path, class: "btn btn-default" %>
+              <% else user_signed_in? %>
+                <%= link_to "Back", root_path, class: "btn btn-default" %>
               <% end %>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <%= @pin.user.username %>
-
-  </div>
+      <div class="comments-show">
+      <h2> Comments: </h2>
+       <% if @comments.blank?%>
+          <h3>No comments just yet, would you like to add the first!</h3>
+      <% else %>
+       <%= render @pin.comments %> <br>
+       <%end%>
+       <div class="comment-content">
+      <h2> Add a comment: </h2>
+       <%= render 'comments/form' %>
+    <div>
+  </div>  
 </div>
+    
+
+ 
