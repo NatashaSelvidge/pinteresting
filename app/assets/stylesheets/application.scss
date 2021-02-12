@@ -17,6 +17,7 @@
 
 body {
 	background: #E9E9E9;
+	width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,6 +93,7 @@ nav {
 		h1 {
 			margin: 0 0 10px 0;
 		}
+
 		.description {
 			color: #868686;
 			line-height: 1.75;
@@ -107,9 +109,50 @@ nav {
 			padding-top: 8px;
 		}
 	}
+	h2, h3, .content {
+		padding-left: 20px;
+	}
+	.comment-body {
+		padding-left: 20px;
+		padding-bottom: 0;
+		border-style: ridge;
+    border-width: 1px;
+    margin: 0;
+		
+		}
+	
 }
 
 textarea {
 	min-height: 250px;
 }
+ input .post {
+	 	padding: 6px 12px;
+		color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    border-radius: 4px;
+		display: inline-block;
+		transition: background-color 0.2s, border 0.2s, color 0.2s;
+    margin-bottom: 0;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparentize($color: #ccc, $amount: 0);
+    font-size: 16px;
+	}
 
+ .comment-content {
+		padding: 20px;
+		
+	}
+	
+.comment-edit, .comment-delete {
+	float: right;
+	padding-bottom: 5px;
+	margin-left: 0;
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+	 
+}
+.comment-delete {
+	padding-right: 20px;
+}
