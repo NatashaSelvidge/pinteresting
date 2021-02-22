@@ -3,11 +3,10 @@ before_action :find_pin, only: [:show, :edit, :update, :destroy, :upvote]
 before_action :authenticate_user!, except: [:index]
 
   def index
-    @pins = Pin.all.reverse
+    @pins = Pin.all.alpha
   end 
 
   def show 
-  
   @comments = Comment.where(pin_id:@pin.id).order("created_at DESC")
   end 
   
@@ -17,8 +16,7 @@ before_action :authenticate_user!, except: [:index]
 
   def create 
     @pin = current_user.pins.build(pin_params)
-   
-     
+    
     if @pin.save
       redirect_to @pin, notice: "Successfully created new Pin"
     else
@@ -43,11 +41,17 @@ before_action :authenticate_user!, except: [:index]
     redirect_to root_path
   end 
 
-
+  
+  
   def upvote
     @pin.upvote_by current_user
     redirect_back fallback_location: root_path
   end 
+  
+  # def my_pinboard 
+  #   @pins = current_user.pins
+  #   render :my_pinboard
+  # end 
 
   private 
 

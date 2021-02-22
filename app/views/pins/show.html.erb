@@ -18,7 +18,12 @@
             <p class="card-text">
               <small class="text-muted">
               <%= @pin.updated_at.strftime("%A, %B, %e, %Y") %>
-             By: <%= @pin.user.username.capitalize %> | <%= pluralize(@comments.count, "Comment") %>
+            <%  if @pin.user.username.empty? %>
+                <% @pin.user.username = @pin.user.email.split("@")[0] %>
+               By: <%= @pin.user.username.capitalize %> | <%= pluralize(@comments.count, "Comment") %>
+            <% else %>
+               By: <%= @pin.user.username.capitalize %> | <%= pluralize(@comments.count, "Comment") %>
+               <% end %>
               </small>
             </p>
           </div>
@@ -46,12 +51,12 @@
       <% else %>
        <%= render @pin.comments %> <br>
        <%end%>
-       <div class="comment-content">
+     
       <h2> Add a comment: </h2>
        <%= render 'comments/form' %>
     <div>
-  </div>  
-</div>
+
+
     
 
  

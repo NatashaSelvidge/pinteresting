@@ -26,14 +26,20 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'acts_as_votable'
 
-# Use Active Storage variant
+
+gem 'omniauth'
+gem 'devise', github: 'heartcombo/devise', branch: 'ca-omniauth-2'
+gem 'omniauth-facebook'
+gem 'dotenv-rails'
+gem 'omniauth-rails_csrf_protection'
+# gem 'activerecord-session_store'
 # gem 'image_processing', '~> 1.2'
 
 # # Reduces boot times through caching; required in config/boot.rb
 # gem 'spree_auth_devise'
 # gem 'spree'
 gem 'pry'
-gem 'devise'
+
 gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'sassc-rails'

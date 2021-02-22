@@ -39,3 +39,4 @@
 yarn-debug.log*
 .yarn-integrity
 *.jpeg
+.env

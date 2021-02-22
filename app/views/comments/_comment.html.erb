@@ -1,7 +1,7 @@
  <div class="comment-body">
  <div class="row">
   <small>
-    <%= comment.commenter %>  
+        <%= comment.commenter.capitalize %>  
     says...
   </small> 
   <br>
@@ -9,11 +9,9 @@
     "<%= comment.content %>"
   </p>
       <div class="comment-delete">
+   <% if @pin.user == current_user || comment.commenter == current_user.username %>
       <%= link_to "Delete",[comment.pin, comment], method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %> <br>
+      <% end %>
       </div>
-  <div class="comment-edit">
-      <%= link_to "Edit", edit_comment_path, class: "btn btn-primary" %>
     </div>
-    </div>
-  </div>
  </div>
