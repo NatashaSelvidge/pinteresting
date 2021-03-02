@@ -178,6 +178,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
+    pg (1.2.3)
     pry (0.14.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -253,7 +254,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
     thor (1.1.0)
@@ -308,6 +308,7 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-rails_csrf_protection
   paperclip
+  pg
   pry
   rack-mini-profiler (~> 2.0)
   rails
@@ -317,7 +318,6 @@ DEPENDENCIES
   selenium-webdriver
   simple_form
   spring
-  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
   uglifier

@@ -17,7 +17,7 @@
   <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-brand">
-    <% if user_signed_in? %>
+    <% if user_signed_in? && current_user.username != nil%>
       <%= link_to " Welcome to Pinteresting #{current_user.username.capitalize} ", root_path %> 
       <% else %>
       <%= link_to "Pinteresting", root_path %> 
