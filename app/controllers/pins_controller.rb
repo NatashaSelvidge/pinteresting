@@ -48,10 +48,8 @@ before_action :authenticate_user!, except: [:index]
     redirect_back fallback_location: root_path
   end 
   
-  # def my_pinboard 
-  #   @pins = current_user.pins
-  #   render :my_pinboard
-  # end 
+
+  
 
   private 
 

@@ -1,0 +1,2 @@
+module CommentedPinsHelper
+end

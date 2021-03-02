@@ -26,6 +26,8 @@
     <% if user_signed_in? %>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "My Pin Board", commented_pins_my_pinboard_path %></li>
+        <li><%= link_to "Comments", commented_pins_my_comments_path %></li>
         <li><%= link_to "New Pin", new_pin_path %></li>
         <li><%= link_to "Account", edit_user_registration_path %></li>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>

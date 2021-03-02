@@ -1,8 +1,8 @@
 class Pin < ApplicationRecord
   acts_as_votable
   belongs_to :user
-  has_many :users, through: :comments
   has_many :comments, dependent: :destroy 
+  has_many :users, through: :comments
   
   has_attached_file :image, styles: { medium: "300x300>" }
   
