@@ -12,7 +12,7 @@ class CommentedPinsController < ApplicationController
   end 
 
     def my_comments 
-    @commented_pins = current_user.pin.comments
+    @commented_pins = current_user.pins.comments
     render :my_comments
   end 
 
